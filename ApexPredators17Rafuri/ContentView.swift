@@ -17,8 +17,7 @@ struct ContentView: View {
         predators.filter(by: currentSelection)
         predators.sort(by: alphabetical)
         return predators.search(for: searchText)
-    }
-    
+}
     var body: some View {
         NavigationStack {
             List (filteredDinos) { predator in
@@ -32,12 +31,10 @@ struct ContentView: View {
                             .scaledToFit()
                             .frame(width: 100, height: 100)
                             .shadow(color: .white, radius: 1)
-                        
                         VStack(alignment: .leading) {
                             //name
                             Text(predator.name)
                                 .fontWeight(.bold)
-                            
                             //type
                             Text(predator.type.rawValue.capitalized)
                                 .font(.subheadline)
